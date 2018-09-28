@@ -45,4 +45,11 @@ app.get("/bad", (req, res) => {
   res.send({ errorMessage: "LePuff!!!" });
 });
 
+app.get("/projects", (req, res) => {
+  res.render("projects", {
+    title: "Projects page",
+    projectMessage: "Porfolio here."
+  });
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
